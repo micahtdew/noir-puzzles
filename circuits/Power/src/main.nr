@@ -5,6 +5,7 @@
 
 fn main(x : Field, y : Field) -> pub Field {
   // your code here
+  x.pow_32(y)
 }
 
 ////////////////////
