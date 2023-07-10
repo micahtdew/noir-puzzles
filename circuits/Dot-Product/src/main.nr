@@ -7,6 +7,11 @@
 
 fn main(x : [ Field; 4 ], y : [ Field; 4 ]) -> pub Field {
   // your code here
+  let mut sum : Field = 0;
+  for i in 0..4 {
+    sum += x[i] * y[i];
+  }
+  sum
 }
 
 ////////////////////
