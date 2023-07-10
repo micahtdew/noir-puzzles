@@ -16,9 +16,26 @@
 // 'nargo test' inside this directory.
 
 // See here: https://noir-lang.org/modules_packages_crates/modules/
+mod math;
 
 fn main(x : Field, y : Field, op : Field) -> pub Field {
     // your code here
+    let mut answer : Field = 0;
+    if op == 0 {
+        answer = math::add(x,y);
+        answer
+    } else if op == 1 {
+        answer = math::sub(x,y);
+        answer
+    } else if op == 2 {
+        answer = math::mul(x,y);
+        answer
+    } else if op == 3 {
+        answer = math::div(x,y);
+        answer
+    } else {
+        answer
+    }
 }
 
 ////////////////////
