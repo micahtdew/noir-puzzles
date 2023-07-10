@@ -4,6 +4,13 @@
 
 fn main(a : u64, lowerbound : pub u64, upperbound : pub u64) -> pub u64 {
   // your code here
+  let mut output : u64 = 0;
+    if a <= upperbound & a >= lowerbound {
+      output = 1;
+      output
+    } else {
+      output
+    }
 }
 
 ////////////////////
