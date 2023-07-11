@@ -72,5 +72,30 @@ fn main(question: pub [Field; 16], answer : [Field; 16]) {
     assert(3 == (m[12] + m[13] +m[14] + m[15]));    
 
     // Solution Starts Here ..
+    let mut check_array: [u64; 8] = [0; 8];
+    for i in 0..4 {
+        check_array[0] += answer[i] as u64;
+        check_array[4] += answer[i * 4] as u64;
+        check_array[5] += answer[(i * 4) + 1] as u64;
+        check_array[6] += answer[(i * 4) + 2] as u64;
+        check_array[7] += answer[(i * 4) + 3] as u64;
+    }
+    for i in 4..8 {
+        check_array[1] += answer[i] as u64;
+    }
+    for i in 8..12 {
+        check_array[2] += answer[i] as u64;
+    }
+    for i in 12..16 {
+        check_array[3] += answer[i] as u64;
+    }
+    
+    for i in 0..8 {
+        assert(check_array[i] == 10);
+        if check_array[i] != 10 {
+            false
+        }
+    }
+    true
 }
 
