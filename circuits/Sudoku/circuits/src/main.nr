@@ -89,7 +89,7 @@ fn main(question: pub [Field; 16], answer : [Field; 16]) -> pub bool{
     for i in 12..16 {
         check_array[3] += answer[i] as u64;
     }
-    
+    let mut erros : Field = 
     for i in 0..8 {
         assert(check_array[i] == 10);
         if check_array[i] != 10 {
