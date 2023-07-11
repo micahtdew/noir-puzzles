@@ -12,7 +12,7 @@ use dep::std;
 //                                                                                    [4, 1, 2, 3]
 //                                                                                    [2, 3, 4, 1]
 
-fn main(question: pub [Field; 16], answer : [Field; 16]) {
+fn main(question: pub [Field; 16], answer : [Field; 16]) -> pub bool{
        
     // Verifying the Question
     for i in 0..16 {
