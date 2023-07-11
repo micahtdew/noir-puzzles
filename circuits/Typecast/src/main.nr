@@ -5,6 +5,11 @@
 
 fn main(x : Field, y : pub Field) -> pub bool {
   // your code here
+  if x as u64 > y as u64{
+    true
+  } else {
+    false
+  }
 }
 
 ////////////////////
